@@ -1,49 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ChessHub</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm a web developer passionate about creating clean and user-friendly websites. I specialize in front-end development with HTML, CSS, and JavaScript.</p>
-    </section>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ChessHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li>
-                <h3>Project 1: Personal Website</h3>
-                <p>A simple, responsive personal portfolio website built with HTML and CSS.</p>
-            </li>
-            <li>
-                <h3>Project 2: To-Do List App</h3>
-                <p>A to-do list application built with JavaScript and CSS for organizing tasks.</p>
-            </li>
-        </ul>
-    </section>
+    <!-- Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/caruseldccd.jpg" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption">
+                    <h3>Elevate your Tactics</h3>
+                    <p>Know different counter in a wider perspective.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/secondcarusel.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="image/djsbubywbfwn.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, please email me at <a href="mailto:myemail@example.com">myemail@example.com</a>.</p>
-    </section>
+    <!-- Main Section -->
+    <div class="container mt-5" id="about">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h2>About Us</h2>
+                <p>chesshub website that cater every player needs.</p>
+                <button class="btn btn-primary">Learn More</button>
+            </div>
+            <div class="col-12 col-md-6">
+                <img src="https://th.bing.com/th/id/OIP.K5TR-xtpCuf8zGtj3pqC4gHaHa?w=178&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="img-fluid rounded shadow" alt="About Us">
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 My Portfolio</p>
+    <!-- Chess Tactics Section -->
+    <div class="container mt-5" id="chess-tactics">
+        <h3 class="text-center">Chess Tactics to Master</h3>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="public/image/fork.jfif" class="card-img-top" alt="Fork">
+                    <div class="card-body">
+                        <h5 class="card-title">Fork</h5>
+                        <p class="card-text">A tactic where a single piece attacks two or more of the opponent's pieces simultaneously.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="public/image/pin.png" class="card-img-top" alt="Pin">
+                    <div class="card-body">
+                        <h5 class="card-title">Pin</h5>
+                        <p class="card-text">A tactic that immobilizes a piece because moving it would expose a more valuable piece behind it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="public/image/skewer.png" class="card-img-top" alt="Skewer">
+                    <div class="card-body">
+                        <h5 class="card-title">Skewer</h5>
+                        <p class="card-text">A tactic where a more valuable piece is attacked, forcing it to move and exposing a less valuable piece behind it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="public/image/discovered-attack.png" class="card-img-top" alt="Discovered Attack">
+                    <div class="card-body">
+                        <h5 class="card-title">Discovered Attack</h5>
+                        <p class="card-text">A tactic where one piece moves away, revealing an attack from another piece behind it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="public/image/normal-pin.png" class="card-img-top" alt="Trapped Piece">
+                    <div class="card-body">
+                        <h5 class="card-title">Trapped Piece</h5>
+                        <p class="card-text">A tactic where a piece is surrounded and cannot escape, leading to its capture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <!-- Services Section -->
+       <div class="container mt-5" id="services">
+        <h3 class="text-center">Our Services</h3>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/Lucas1009991/phpDldolZ.jpg" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Make Every Game Enjoyable</h5>
+                        <p class="card-text">Discover the Secret of Every Grandmaster.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.JINSH8Wt25zHXyQERxOd5AHaHa?w=175&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top" alt="Service 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Learn Each Role</h5>
+                        <p class="card-text">know the power of each piece..</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.MQfU7pMoLjdq8xNebbu49wHaEv?w=700&h=448&rs=1&pid=ImgDetMain" class="card-img-top" alt="Service 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Analyze Every Match</h5>
+                        <p class="card-text">Improving your moves every game.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="container mt-5" id="testimonials">
+        <h3 class="text-center">What Our Clients Say</h3>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="card-text">"ChessHub transformed our online presence. Their team is professional and dedicated!"</p>
+                        <h5 class="card-title">- Alex Johnson</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="card-text">"The website they built for us is not only beautiful but also functional. Highly recommend!"</p>
+                        <h5 class="card-title">- Sarah Lee</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="card-text">"Great service and support! They helped us every step of the way."</p>
+                        <h5 class="card-title">- Michael Smith</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="container mt-5 text-center">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Contact us today to discuss your ideas and get a free consultation!</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Get Started</a>
+    </div>
+
+ 
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 mb-3">
+                    <h5>About Us</h5>
+                    <p>We create innovative and responsive web applications that help businesses grow.</p>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#" class="text-white">Services</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 text-center mb-3">
+                    <h5>Follow Us</h5>
+                    <a href="#" class="text-white me-2">Facebook</a>
+                    <a href="#" class="text-white me-2">Twitter</a>
+                    <a href="#" class="text-white">Instagram</a>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center">&copy; 2025 ChessHub. All Rights Reserved.</p>
+        </div>
     </footer>
+
 </body>
+
 </html>
